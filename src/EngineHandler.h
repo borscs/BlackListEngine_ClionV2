@@ -12,6 +12,12 @@ class EngineHandler
 {
 public:
 
+	void scan(const QString &path);
+
 private:
+
+	Engine engine;
+	utils::Utils utils;
+	JsonHelper jsonHelper;
 
 };

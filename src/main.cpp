@@ -47,6 +47,7 @@ int main(int argc, char *argv[])
 
 	if (parser.isSet(scanOption)) {
 
+		engineHandler.scan(parser.value(scanOption));
 
 		return 0;
 	}

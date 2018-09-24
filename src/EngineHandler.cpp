@@ -28,7 +28,5 @@ void EngineHandler::scan(const QString &path)
 			break;
 	}
 }
-EngineHandler::EngineHandler()
-{
-	engine.init();
-}
+
+
