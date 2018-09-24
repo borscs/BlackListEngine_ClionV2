@@ -13,6 +13,8 @@ class EngineHandler
 public:
 
 	void scan(const QString &path);
+	void generate(QString path);
+
 
 private:
 

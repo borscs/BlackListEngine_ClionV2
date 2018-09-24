@@ -28,5 +28,14 @@ void EngineHandler::scan(const QString &path)
 			break;
 	}
 }
-
+void EngineHandler::generate( QString path )
+{
+	jsonHelper.clearJSON();
+	jsonHelper.addToJSON("file_name", path);
+	jsonHelper.addToJSON("md5", engine.fileHashGenerate(path, QCryptographicHash::Md5));
+	jsonHelper.addToJSON("sha1", engine.fileHashGenerate(path, QCryptographicHash::Sha1));
+	jsonHelper.addToJSON("sha256", engine.fileHashGenerate(path, QCryptographicHash::Sha256));
+	jsonHelper.createNode();
+	utils.qStdOut() << jsonHelper.createJSON().toJson(QJsonDocument::Indented);
+}
 
