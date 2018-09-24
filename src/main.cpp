@@ -46,25 +46,18 @@ int main(int argc, char *argv[])
 	parser.process(a);
 
 	if (parser.isSet(scanOption)) {
-
 		engineHandler.scan(parser.value(scanOption));
-
 		return 0;
 	}
 	else if (parser.isSet(lookupOption)) {
-		engineHandler.generate(parser.value(scanOption));
-
-
+		engineHandler.generate(parser.value(scanOption))
 		return 0;
 	}
 	else if (parser.isSet(generateOption)) {
 
-
-
 		return 0;
 	}
 	else if (parser.isSet(scanFolderOption)) {
-
 
 		return 0;
 	}
